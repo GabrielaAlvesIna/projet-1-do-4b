@@ -1,0 +1,61 @@
+criaCartao(
+    'Programação',
+    'O que é Python?',
+    'O Python é uma linguagem de programação'
+)
+
+criaCartao(
+    'Geografia',
+    'Qual a capital da França?',
+    'A capital da França é Paris'
+)
+
+criaCartao(
+    'Programação',
+    'O que é uma função?',
+    'Uma função é um bloco de código que executa alguma tarefa'
+) 
+cartao.innerHTML = `
+<div class="cartao__conteudo">
+<h3>Programação</h3>
+<div class="cartao__conteudo__pergunta">
+        <p>O que é JavaScript?</p>
+</div>
+<div class="cartao__conteudo__resposta">
+        <p>O JavaScript é uma linguagem de programação</p>
+</div>
+</div>
+`
+        <!-- <article class="cartao">
+                <div class="cartao__conteudo">
+                        <h3>Programação</h3>
+                        <div class="cartao__conteudo__pergunta">
+                                <p>O que é JavaScript?</p>
+                        </div>
+                        <div class="cartao__conteudo__resposta">
+                                <p>O JavaScript é uma linguagem de programação</p>
+                        </div>
+                </div>
+        </article> -->
+cartao.innerHTML = `
+        <div class="cartao__conteudo">
+        <h3>${categoria}</h3>
+        <div class="cartao__conteudo__pergunta">
+                <p>${pergunta}</p>
+        </div>
+        <div class="cartao__conteudo__resposta">
+                <p>${resposta}</p>
+        </div>
+        </div>
+`
+.cartao__conteudo h3 {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+    backface-visibility: hidden;
+}
